@@ -29,16 +29,20 @@
           var form_data = new FormData();
           form_data.append('file', file);
           $.ajax({
+              dataType: "json",
               data: form_data,
               type: "POST",
               url: 'saveimage.php',
               cache: false,
               contentType: false,
               processData: false,
-              success: function(url) {
-                  //$(el).summernote('editor.insertImage', url);
-                  console.log(url);
-                  $("#summernote").summernote("insertImage", url);
+              success: function(data) {
+                console.log(data);
+                if(data.error){
+                  $('#summernote').summernote('code', data.message);
+                }else{
+                  $("#summernote").summernote("insertImage", data.url);
+                }
               }
           });
           }
