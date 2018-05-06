@@ -1,6 +1,6 @@
-# summernote-php
-summernote WYSIWYG
+## summernote-php
+summernote-php WYSIWYG - upload image in folder 
 
-belum ada cek saat upload image, silahkan sesuaikan dengan kebutuhan anda,
+## Credits
 
-
+* [Summernote](https://github.com/summernote/summernote) - Super simple WYSIWYG editor
